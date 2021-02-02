@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Tirivia_Application_Assignment"

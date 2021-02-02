@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main_activity"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rapidzz.tirivia_application_assignment.view.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="com.rapidzz.tirivia_application_assignment.view.fragments.QuestionListFragment"
+        android:label="QuestionListFragment"
+        tools:layout="@layout/fragment_questions">
+        <argument
+            android:name="optionType"
+            android:defaultValue="multiple"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="difficultyLevel"
+            android:defaultValue="easy"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="category"
+            app:argType="com.rapidzz.tirivia_application_assignment.models.dataModels.generalModels.CategoryModel"
+            app:nullable="true" />
+
+
+    </fragment>
+</navigation>

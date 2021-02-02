@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvNumber"
+                style="@style/TvNormalStyle"
+                android:layout_width="0dp"
+                android:layout_gravity="start|top"
+                android:layout_weight=".1"
+                android:ellipsize="end"
+                android:gravity="start|top"
+                android:maxLines="1"
+                android:text="1)"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_light_black"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:id="@+id/tvQuestions"
+                style="@style/TvNormalStyle"
+                android:layout_width="0dp"
+                android:layout_gravity="start|top"
+                android:layout_weight=".9"
+                android:autoLink="web"
+                android:ellipsize="end"
+                android:gravity="start|top"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_light_black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <RadioGroup xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rgQuestionAnswerList"
+            style="@style/RadioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/colorGrey" />
+</LinearLayout>
